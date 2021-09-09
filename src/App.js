@@ -3,21 +3,25 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-
+import HomePage from './components/HomePage';
+import PostPage from './components/PostPage';
 
 function App() {
 
   return (
-    < div className="App" >
-      <Switch>
-
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div >
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/post/:postId">
+            <PostPage />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

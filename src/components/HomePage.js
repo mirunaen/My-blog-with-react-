@@ -1,5 +1,7 @@
-import './App.css';
 import { useState, useEffect } from 'react';
+import {
+  Link
+} from "react-router-dom";
 
 // REST api
 const apiUrl = "http://localhost:3004/posts"
@@ -39,9 +41,9 @@ function HomePage() {
   return (
     < div className="App" >
       {postList.map(post => {
-        return <div>
+        return <Link to={`./post/${post.id}`}>
           <p>{post.title}</p>
-        </div>
+        </Link>
       })}
       <input value={newPostTitle} onChange={(event) => { setnewPostTitle(event.target.value) }}></input>
       <button onClick={() => {
