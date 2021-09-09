@@ -53,6 +53,7 @@ function HomePage() {
         })
         setnewPostTitle("")
       }}>Create fake post</button>
+      <Link to="/create-post">Add a post</Link>
     </div >
   );
 }
