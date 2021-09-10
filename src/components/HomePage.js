@@ -42,7 +42,7 @@ function HomePage() {
 
   return (
     < Wrapper className="App" >
-      <h1>My Life Work Knowledge :)</h1>
+      <h1>My Blog :)</h1>
       {postList.map(post => {
         return <Link to={`./post/${post.id}`}>
           <Title>{post.title}</Title>

@@ -4,24 +4,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
-const Wrapper = styled.section`
-  background: #B4F8C8;
-  text-align:center;
-  font-size: 1.5em;
-  width: 100%;
-  height: 100%;
-  max-width: 1024px;
-  padding: 0 20px;
-  margin: 0 auto;
-`;
-
 const apiUrl = "http://localhost:3004/posts"
 
 
@@ -88,4 +70,30 @@ export default () => {
     )
 }
 
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
+// Create a Wrapper component that'll render a <section> tag with some styles
+const Wrapper = styled.section`
+  background: #A0E7E5;
+  text-align:center;
+  font-size: 1.5em;
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+`;
+
+const StyledButton = styled.button`
+  font-size: 1em;
+  color: tomato;
+  border:2px solid tomato;
+  border-radius:5px;
+  margin:1em;
+  padding:0.21em 1em;
+  
+`;
+
+const FieldConatiner = styled.div``
