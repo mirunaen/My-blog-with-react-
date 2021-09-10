@@ -34,14 +34,14 @@ export default () => {
             }
             createArticle(newPost)
         }}>
-            <div>
+            <ContainerDescription>
                 <label>Title:</label>
                 <Input name="title"></Input>
-            </div>
-            <div>
+            </ContainerDescription>
+            <ContainerDescription>
                 <label>Desciption:</label>
-                <textarea name="description"></textarea>
-            </div>
+                <TextArea name="description"></TextArea>
+            </ContainerDescription>
             <StyledButton type="submit" >Submit</StyledButton>
         </form> : <div>Post Was Created!</div>}
         <Link to="/" >Go back home</Link>
@@ -75,8 +75,13 @@ const StyledButton = styled.button`
 `;
 
 const TextArea = styled.textarea`
-    color:tomato;
-    border: tomato;
+padding: 0.5em;
+margin: 0.5em;
+color: palevioletred;
+background: #DB8370;
+transition: background-color 1s linear;
+border: none;
+border-radius: 3px;
 `
 
 const Input = styled.input`
@@ -87,3 +92,7 @@ const Input = styled.input`
   border: none;
   border-radius: 3px;
 `;
+
+const ContainerDescription = styled.div`
+    display:flex;
+`
