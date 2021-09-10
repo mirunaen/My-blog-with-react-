@@ -1,7 +1,26 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
+
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  background: #B4F8C8;
+  text-align:center;
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+`;
 
 const apiUrl = "http://localhost:3004/posts"
 
@@ -45,8 +64,8 @@ export default () => {
     }, []);
 
     return (
-        <div>
-            <h1>{postData && postData.title}</h1>
+        <Wrapper>
+            <Title>{postData && postData.title}</Title>
             <p>{postData && postData.description}</p>
             <h2>Comments:</h2>
             <div>
@@ -65,7 +84,7 @@ export default () => {
             </div>
 
             <Link to='/'>Go back home</Link>
-        </div>
+        </Wrapper>
     )
 }
 

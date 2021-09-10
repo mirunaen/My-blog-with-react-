@@ -2,6 +2,22 @@ import { useState, useEffect } from 'react';
 import {
   Link
 } from "react-router-dom";
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const Wrapper = styled.section`
+  background: #A0E7E5;
+  text-align:center;
+  font-size: 1.5em;
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+`;
 
 // REST api
 const apiUrl = "http://localhost:3004/posts"
@@ -25,15 +41,16 @@ function HomePage() {
   }, []) //only in component did mount
 
   return (
-    < div className="App" >
+    < Wrapper className="App" >
+      <h1>My Life Work Knowledge :)</h1>
       {postList.map(post => {
         return <Link to={`./post/${post.id}`}>
-          <p>{post.title}</p>
+          <Title>{post.title}</Title>
         </Link>
       })}
 
       <Link to="/create-post">Add a post</Link>
-    </div >
+    </Wrapper >
   );
 }
 
