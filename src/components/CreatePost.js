@@ -78,7 +78,7 @@ const TextArea = styled.textarea`
 padding: 0.5em;
 margin: 0.5em;
 color: palevioletred;
-background: #DB8370;
+background: white;
 transition: background-color 1s linear;
 border: none;
 border-radius: 3px;
@@ -88,7 +88,7 @@ const Input = styled.input`
   padding: 0.5em;
   margin: 0.5em;
   color: palevioletred;
-  background: #A0E7E5;
+  background: white;
   border: none;
   border-radius: 3px;
 `;
