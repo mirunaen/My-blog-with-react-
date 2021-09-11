@@ -19,6 +19,18 @@ const Wrapper = styled.section`
   margin: 0 auto;
 `;
 
+const PostDescription = styled.p`
+  text-overflow: ellipsis;  
+  width: 100%;  
+  max-width: 100%;
+  color: #808e9b;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+`
+
 // REST api
 const apiUrl = "http://localhost:3004/posts"
 function HomePage() {
@@ -41,11 +53,12 @@ function HomePage() {
   }, []) //only in component did mount
 
   return (
-    < Wrapper className="App" >
+    <Wrapper className="App" >
       <h1>My Blog :)</h1>
       {postList.map(post => {
-        return <Link to={`./post/${post.id}`}>
-          <Title>{post.title}</Title>
+        return <Link to={`./post/${post.id}`} key={post.id}>
+          <Title data-id={`title-${post.id}`}>{post.title}</Title>
+          <PostDescription>{post.description}</PostDescription>
         </Link>
       })}
 
