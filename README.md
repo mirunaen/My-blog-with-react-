@@ -1,8 +1,8 @@
-# ## My_Fancy_Blog
+## My_Fancy_Blog
 
 Build a fancy blog with react using React.com, style components and Cypress for testing
 
-[Miruna Nedelcu](miruna@codewithdragos.com)
+[Miruna Nedelcu](https://github.com/mirunaen)
 
 ## Assumptions
 
