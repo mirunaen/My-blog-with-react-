@@ -13,6 +13,11 @@
       "description": "A really nice way to start."
     },
     {
+      "title": "A default Title",
+      "description": "Some description",
+      "id": 3
+    },
+    {
       "title": "I made a new post! ",
       "description": "It is about my life...so it will be short <->",
       "id": 17
@@ -113,6 +118,11 @@
       "body": "",
       "postId": "1",
       "id": 17
+    },
+    {
+      "body": "hey",
+      "postId": "undefined",
+      "id": 18
     }
   ],
   "profile": {

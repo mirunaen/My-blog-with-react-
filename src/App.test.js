@@ -11,10 +11,10 @@ import {
 
 //mock for the server to get a post 
 //when the request will run
+//instead of going to the backend we will run this 
 const server = setupServer(
   rest.get('http://localhost:3004/posts', (req, res, ctx) => {
     return res(ctx.json([{
-      //instead of going to the backend we will run this 
       "title": "A default Title",
       "description": "Some description",
       "id": 3

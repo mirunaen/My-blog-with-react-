@@ -29,7 +29,7 @@ const PostDescription = styled.p`
   margin-top: 0px;
   white-space: nowrap;
   overflow: hidden;
-`
+`;
 
 // REST api
 const apiUrl = "http://localhost:3004/posts"
@@ -56,10 +56,12 @@ function HomePage() {
     <Wrapper className="App" >
       <h1>My Blog :)</h1>
       {postList.map(post => {
-        return <Link to={`./post/${post.id}`} key={post.id}>
-          <Title data-id={`title-${post.id}`}>{post.title}</Title>
-          <PostDescription>{post.description}</PostDescription>
-        </Link>
+        return (
+          <Link to={`./post/${post.id}`} key={post.id}>
+            <Title data-testid={`title-${post.id}`}>{post.title}</Title>
+            <PostDescription data-testid={`description-${post.id}`}>{post.description}</PostDescription>
+          </Link>
+        )
       })}
 
       <Link to="/create-post">Add a post</Link>
