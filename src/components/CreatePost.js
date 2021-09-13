@@ -36,15 +36,15 @@ export default () => {
         }}>
             <ContainerDescription>
                 <label>Title:</label>
-                <Input name="title"></Input>
+                <Input name="title" data-cy={"input-title"}></Input>
             </ContainerDescription>
             <ContainerDescription>
                 <label>Desciption:</label>
-                <TextArea name="description"></TextArea>
+                <TextArea name="description" data-cy="input-description"></TextArea>
             </ContainerDescription>
-            <StyledButton type="submit" >Submit</StyledButton>
+            <StyledButton type="submit" data-cy="submit-btn">Submit</StyledButton>
         </form> : <div>Post Was Created!</div>}
-        <Link to="/" >Go back home</Link>
+        <Link to="/" data-cy="back-home-btn" >Go back home</Link>
     </Wrapper>
 }
 

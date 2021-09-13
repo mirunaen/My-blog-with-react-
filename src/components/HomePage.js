@@ -57,14 +57,14 @@ function HomePage() {
       <h1>My Blog :)</h1>
       {postList.map(post => {
         return (
-          <Link to={`./post/${post.id}`} key={post.id}>
+          <Link to={`./post/${post.id}`} key={post.id} data-cy={`link-post-${post.id}`}>
             <Title data-testid={`title-${post.id}`}>{post.title}</Title>
             <PostDescription data-testid={`description-${post.id}`}>{post.description}</PostDescription>
           </Link>
         )
       })}
 
-      <Link to="/create-post">Add a post</Link>
+      <Link to="/create-post" data-cy={"add-post-button"}>Add a post</Link>
     </Wrapper >
   );
 }
